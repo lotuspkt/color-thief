@@ -122,6 +122,8 @@ ColorThief.prototype.getPalette = function(sourceImage, colorCount, quality) {
         if (a >= 125) {
             if (!(r > 250 && g > 250 && b > 250)) {
                 pixelArray.push([r, g, b]);
+            }else if((r == 250 && g == 250 && b == 250) || (r == 255 && g == 255 && b == 255)){
+                pixelArray.push([255, 255, 255]);
             }
         }
     }
